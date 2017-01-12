@@ -13,5 +13,5 @@ Make sure you have [Übersicht](http://tracesof.net/uebersicht/) installed.
 Then clone this repository.
 
 ```bash
-git clone https://github.com/aeikenberry/myNerdbar $HOME/Library/Application\ Support/Übersicht/widgets/nerdbar.widget
+git clone https://github.com/aeikenberry/nerdbar.widget $HOME/Library/Application\ Support/Übersicht/widgets/nerdbar.widget
 ```
