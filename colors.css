@@ -44,7 +44,11 @@ span {
     color: #282828;
 }
 .grey {
-    color: #7c6f64;
+    color: #999;
+}
+.win-back {
+    background-color: #999999;
+    height: 100%;
 }
 .purple {
     color: #d3869b;

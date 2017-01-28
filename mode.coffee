@@ -11,10 +11,10 @@ render: (output) ->
 style: """
   -webkit-font-smoothing: antialiased
   color: #66d9ef
-  font: 12px Hack
+  font: 13px TerminessTTF Nerd Font
   left: 10px
-  top: 7px
-  width:850px
+  right: 10px
+  top: 5px
   height: 16px
   white-space: nowrap
   text-overflow: ellipsis
@@ -32,9 +32,6 @@ update: (output, domEl) ->
   wins = values[2];
   win = "";
   i = 0;
-  console.log(mode)
-  console.log(/bsp/.test(mode))
-  
 
   screensegs = screens.split('(');
 
@@ -50,24 +47,10 @@ update: (output, domEl) ->
   for sseg in screensegs
     i += 1;
     if sseg.slice(-1) == ")"
-      screenhtml += "<span class='icon screen#{i}'>&nbsp;&nbsp;&nbsp;</span>" ;
+      screenhtml += "<span class='white '>&nbsp;+&nbsp;&nbsp;</span>" ;
     else
-      screenhtml += "<span class='icon white screen#{i}'>&nbsp;&nbsp;&nbsp;</span>" ;
+      screenhtml += "<span class='grey'>&nbsp;+&nbsp;&nbsp;</span>" ;
 
-
-  #display the html string
-  $(domEl).find('.kwmmode').html("<span class='tilingMode icon'></span><span class='tilingMode white'>#{mode} <span class='blue'> ⎢ </span></span>" + screenhtml)
-
-  $(".screen1").on 'click', => @run "osascript -e 'tell application \"System Events\" to key code 18 using control down'"
-  $(".screen2").on 'click', => @run "osascript -e 'tell application \"System Events\" to key code 19 using control down'"
-  $(".screen3").on 'click', => @run "osascript -e 'tell application \"System Events\" to key code 20 using control down'"
-  $(".screen4").on 'click', => @run "osascript -e 'tell application \"System Events\" to key code 21 using control down'"
-  
-  # cycle through KWM space modes by clicking on the mode icon or mode name
-  if /bsp/.test(mode) == true
-    console.log("in bsp")
-    $(".tilingMode").on 'click', => @run "/usr/local/bin/kwmc space -t float"
-  else if /float/.test(mode) == true
-    $(".tilingMode").on 'click', => @run "/usr/local/bin/kwmc space -t monocle"
-  else
-    $(".tilingMode").on 'click', => @run "/usr/local/bin/kwmc space -t bsp"
+  $(domEl).find('.kwmmode').html(
+    "<span class='grey'>#{mode}</span>" + "<div style='width: 50%; margin: 0 auto; padding:0; margin-top: -11px; text-align: center;'>" + screenhtml + "</div>"
+  )
