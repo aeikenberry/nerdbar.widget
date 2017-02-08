@@ -8,7 +8,7 @@ render: (output) ->
 style: """
   -webkit-font-smoothing: antialiased
   color: #999
-  font: 11px Hack
+  font: 14px Fira Mono
   height: 16px
   left: 80px
   overflow: hidden

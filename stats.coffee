@@ -10,10 +10,10 @@ render: (output) ->
 
 style: """
   -webkit-font-smoothing: antialiased
-  font: 12px TerminessTTF Nerd Font
+  font: 10px Fira Mono
   text-transform: lowercase
-  right: 18px
-  bottom: 4px
+  right: 17px
+  bottom: 2px
   color: #66d9ef
   height: 13
 """

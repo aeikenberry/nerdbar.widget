@@ -11,7 +11,7 @@ render: (output) ->
 style: """
   -webkit-font-smoothing: antialiased
   color: #66d9ef
-  font: 13px TerminessTTF Nerd Font
+  font: 14px Fira Mono
   left: 10px
   right: 10px
   top: 5px
@@ -47,10 +47,10 @@ update: (output, domEl) ->
   for sseg in screensegs
     i += 1;
     if sseg.slice(-1) == ")"
-      screenhtml += "<span class='white '>&nbsp;+&nbsp;&nbsp;</span>" ;
+      screenhtml += "<span class='white '>&nbsp;*&nbsp;&nbsp;</span>" ;
     else
-      screenhtml += "<span class='grey'>&nbsp;+&nbsp;&nbsp;</span>" ;
+      screenhtml += "<span class='grey'>&nbsp;*&nbsp;&nbsp;</span>" ;
 
   $(domEl).find('.kwmmode').html(
-    "<span class='grey'>#{mode}</span>" + "<div style='width: 50%; margin: 0 auto; padding:0; margin-top: -11px; text-align: center;'>" + screenhtml + "</div>"
+    "<span class='grey'>#{mode}</span>" + "<div style='width: 50%; margin: 0 auto; padding:0; margin-top: -17px; font-weight: bold; text-align: center;'>" + screenhtml + "</div>"
   )
