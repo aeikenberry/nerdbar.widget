@@ -11,17 +11,17 @@ echo "$theArtist - $theName"
 refreshFrequency: 2000
 
 style: """
-  background-color: #333
+  background-color: #56b6c2
   margin-bottom: 0
   padding: 4px 15px 4px 15px
   top: 0
-  right: 300px
-  color: #666
+  right: 240px
   .some-class
     font-family: Fira Mono
     font-size: 12px
 """
 
 render: (output) -> """
-	<div class="some-class">♬ #{output}</div>
+  <link rel="stylesheet" type="text/css" href="/nerdbar.widget/colors.css" />
+	<div class="some-class black">♬ #{output}</div>
 """

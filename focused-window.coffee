@@ -3,16 +3,19 @@ command: "echo $(/usr/local/bin/kwmc query window focused name)"
 refreshFrequency: 1000 # ms
 
 render: (output) ->
-  "#{output}"
+  "<span class='black'>❒ #{output}</span>"
 
 style: """
+  background-color: #c678dd
   -webkit-font-smoothing: antialiased
-  color: #999
-  font: 14px Fira Mono
-  height: 16px
-  left: 80px
+  font: 12px Fira Mono
+  text-align: left
+  top: 0
   overflow: hidden
+  max-width: 600px
   text-overflow: ellipsis
-  top: 6px
-  width: 500px
+  white-space: no-wrap
+  left: 155px
+  padding: 8px 10px 4px 10px
+  min-height: 15px
 """

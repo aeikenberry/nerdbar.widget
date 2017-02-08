@@ -10,10 +10,12 @@ render: (output) ->
 
 style: """
   -webkit-font-smoothing: antialiased
+  background-color: #98c379
   font: 14px Fira Mono
   text-transform: lowercase
-  right: 5px
-  top: 4px
+  padding: 4px 10px 4px 10px
+  right: 0
+  top: 0
   height: 13
   .weather_forecast
     width: 8em
@@ -27,7 +29,6 @@ style: """
     position: relative
   .charging
     font: 13px fontawesome
-    color: #f8f8f2
     position: relative
     top: 1px
     right: -16px
@@ -36,36 +37,36 @@ style: """
 
 timeAndDate: (date, time) ->
   # returns a formatted html string with the date and time
-  return "<span class='grey'>#{date}  #{time}</span>";
+  return "<span class='black'>#{date}  #{time}</span>";
 
 batteryStatus: (battery, state) ->
   #returns a formatted html string current battery percentage, a representative icon and adds a lighting bolt if the
   # battery is plugged in and charging
   batnum = parseInt(battery)
   if state == 'AC' and batnum >= 90
-    return "<span class=''>  </span><span class='icon grey'> </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='icon black'> </span><span class='black'>#{batnum}%</span>"
   else if state == 'AC' and batnum >= 50 and batnum < 90
-    return "<span class=''>  </span><span class='grey icon'> </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black icon'> </span><span class='black'>#{batnum}%</span>"
   else if state == 'AC' and batnum < 50 and batnum >= 15
-    return "<span class=''>  </span><span class='grey icon'> </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black icon'> </span><span class='black'>#{batnum}%</span>"
   else if state == 'AC' and batnum < 15
-    return "<span class=''>  </span><span class='grey icon'> </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black icon'> </span><span class='black'>#{batnum}%</span>"
   else if batnum >= 90
-    return "<span class='grey icon'>  </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if batnum >= 50 and batnum < 90
-    return "<span class='grey icon'>  </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if batnum < 50 and batnum >= 15
-    return "<span class='grey icon'>  </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if batnum < 15
-    return "<span class='grey icon'>  </span><span class='grey'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
 
 getWifiStatus: (status) ->
   if status == "Wi-Fi"
-    return "<span class='wifi grey'>&nbsp</span>";
+    return "<span class='wifi black'>&nbsp</span>";
   if status == 'USB 10/100/1000 LAN' or status == 'Apple USB Ethernet Adapter'
-    return "<span class='wifi grey'></span>";
+    return "<span class='wifi black'></span>";
   else
-    return "<span class='grey'>x</span>";
+    return "<span class='black'>x</span>";
 
 update: (output, domEl) ->
 
