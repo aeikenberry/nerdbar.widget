@@ -17,6 +17,8 @@ style: """
   top: 0
   height: 16px
   white-space: nowrap
+  width: 170px
+  text-align: center
   text-overflow: ellipsis
   overflow: ellipsis
 """
@@ -51,4 +53,4 @@ update: (output, domEl) ->
     else
       screenhtml += "<span class='white'>&nbsp;*&nbsp;&nbsp;</span>" ;
 
-  $(domEl).find('.kwmmode').html(screenhtml)
+  $(domEl).find('.kwmmode').html(mode + " " + screenhtml)

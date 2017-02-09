@@ -15,7 +15,7 @@ style: """
   max-width: 600px
   text-overflow: ellipsis
   white-space: no-wrap
-  left: 155px
+  left: 210px
   padding: 8px 10px 4px 10px
   min-height: 15px
 """

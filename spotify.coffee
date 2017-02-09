@@ -15,7 +15,7 @@ style: """
   margin-bottom: 0
   padding: 4px 15px 4px 15px
   top: 0
-  right: 240px
+  right: 260px
   .some-class
     font-family: Fira Mono
     font-size: 12px

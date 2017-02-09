@@ -16,7 +16,9 @@ style: """
   padding: 4px 10px 4px 10px
   right: 0
   top: 0
+  width: 230px
   height: 13
+  text-align: center
   .weather_forecast
     width: 8em
     background: #272822
