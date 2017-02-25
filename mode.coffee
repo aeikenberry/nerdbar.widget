@@ -10,10 +10,10 @@ render: (output) ->
 
 style: """
   -webkit-font-smoothing: antialiased
-  background-color: #fabd2f
   padding: 6px 15px 3px 15px
   font-family: "Roboto Mono for Powerline"
   font-size: 12px
+  color: #cdd3df
   left: 0
   top: 0
   height: 16px

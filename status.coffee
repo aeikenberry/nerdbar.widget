@@ -10,12 +10,12 @@ render: (output) ->
 
 style: """
   -webkit-font-smoothing: antialiased
-  background-color: #b8bb26
   font-family: "Roboto Mono for Powerline"
   font-size: 12px
   text-transform: lowercase
   padding: 4px 10px 4px 10px
   right: 0
+  color: #cdd3df
   top: 0
   width: 230px
   height: 13
@@ -40,36 +40,36 @@ style: """
 
 timeAndDate: (date, time) ->
   # returns a formatted html string with the date and time
-  return "<span class='black'>#{date}  #{time}</span>";
+  return "<span class=''>#{date}  #{time}</span>";
 
 batteryStatus: (battery, state) ->
   #returns a formatted html string current battery percentage, a representative icon and adds a lighting bolt if the
   # battery is plugged in and charging
   batnum = parseInt(battery)
   if state == 'AC' and batnum >= 90
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
   else if state == 'AC' and batnum >= 50 and batnum < 90
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
   else if state == 'AC' and batnum < 50 and batnum >= 15
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
   else if state == 'AC' and batnum < 15
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
   else if batnum >= 90
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
   else if batnum >= 50 and batnum < 90
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
   else if batnum < 50 and batnum >= 15
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
   else if batnum < 15
-    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
+    return "<span class=' icon'>  </span><span class=''>#{batnum}%</span>"
 
 getWifiStatus: (status) ->
   if status == "Wi-Fi"
-    return "<span class='wifi black'>&nbsp</span>";
+    return "<span class='wifi '>&nbsp</span>";
   if status == 'USB 10/100/1000 LAN' or status == 'Apple USB Ethernet Adapter'
-    return "<span class='wifi black'></span>";
+    return "<span class='wifi '></span>";
   else
-    return "<span class='black'>x</span>";
+    return "<span class=''>x</span>";
 
 update: (output, domEl) ->
 

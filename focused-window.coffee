@@ -6,8 +6,7 @@ render: (output) ->
   "<div>» #{output}</div>"
 
 style: """
-  color: #ebdbb2
-  background-color: #6b6c6c
+  color: #cdd3df
   font-family: "Roboto Mono for Powerline"
   font-size: 12px
   text-align: left
