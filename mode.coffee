@@ -10,9 +10,10 @@ render: (output) ->
 
 style: """
   -webkit-font-smoothing: antialiased
-  background-color: #61afef
-  padding: 6px 15px 4px 15px
-  font: 12px Fira Mono
+  background-color: #fabd2f
+  padding: 6px 15px 3px 15px
+  font-family: "Roboto Mono for Powerline"
+  font-size: 12px
   left: 0
   top: 0
   height: 16px

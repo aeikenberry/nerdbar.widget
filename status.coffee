@@ -10,8 +10,9 @@ render: (output) ->
 
 style: """
   -webkit-font-smoothing: antialiased
-  background-color: #98c379
-  font: 14px Fira Mono
+  background-color: #b8bb26
+  font-family: "Roboto Mono for Powerline"
+  font-size: 12px
   text-transform: lowercase
   padding: 4px 10px 4px 10px
   right: 0
@@ -46,13 +47,13 @@ batteryStatus: (battery, state) ->
   # battery is plugged in and charging
   batnum = parseInt(battery)
   if state == 'AC' and batnum >= 90
-    return "<span class='black icon'>  </span><span class='icon black'> </span><span class='black'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if state == 'AC' and batnum >= 50 and batnum < 90
-    return "<span class='black icon'>  </span><span class='black icon'> </span><span class='black'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if state == 'AC' and batnum < 50 and batnum >= 15
-    return "<span class='black icon'>  </span><span class='black icon'> </span><span class='black'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if state == 'AC' and batnum < 15
-    return "<span class='black icon'>  </span><span class='black icon'> </span><span class='black'>#{batnum}%</span>"
+    return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if batnum >= 90
     return "<span class='black icon'>  </span><span class='black'>#{batnum}%</span>"
   else if batnum >= 50 and batnum < 90
