@@ -50,8 +50,8 @@ update: (output, domEl) ->
   for sseg in screensegs
     i += 1;
     if sseg.slice(-1) == ")"
-      screenhtml += "<span class='black '>&nbsp;*&nbsp;&nbsp;</span>" ;
+      screenhtml += "<span class='cyan '>&nbsp;*&nbsp;&nbsp;</span>" ;
     else
-      screenhtml += "<span class='white'>&nbsp;*&nbsp;&nbsp;</span>" ;
+      screenhtml += "<span class='grey'>&nbsp;*&nbsp;&nbsp;</span>" ;
 
   $(domEl).find('.kwmmode').html(mode + " " + screenhtml)
